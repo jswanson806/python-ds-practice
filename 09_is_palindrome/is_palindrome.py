@@ -21,3 +21,12 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
+    words = "".join(phrase.split()).lower()
+    reverse = "".join(reversed(words))
+    if reverse == words:
+        return True
+    return False
+    
+
+print(is_palindrome('taco cAt'))
+print(is_palindrome('taco cato'))
