@@ -26,7 +26,3 @@ def is_palindrome(phrase):
     if reverse == words:
         return True
     return False
-    
-
-print(is_palindrome('taco cAt'))
-print(is_palindrome('taco cato'))
