@@ -21,3 +21,17 @@ def sum_pairs(nums, goal):
         >>> sum_pairs([11, 20, 4, 2, 1, 5], 100)
         ()
     """
+    # empty set to hold number from last iteration
+    already_visited = set()
+
+    for i in nums:
+        # the number needed to satisfy condition
+        difference = goal - i
+        # check if number needed is the last number
+        if difference in already_visited:
+            # if so, return the number needed and the current number as a tuple
+            return(difference, i)
+        # if not, add current number to set for next iteration
+        already_visited.add(i)
+    # if number needed is not found, return empty tuple
+    return ()

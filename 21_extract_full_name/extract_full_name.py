@@ -15,10 +15,4 @@ def extract_full_names(people):
         ['Ada Lovelace', 'Grace Hopper']
     """
 #    code goes here ---->
-
-names = [
-        {'first': 'Ada', 'last': 'Lovelace'},
-        {'first': 'Grace', 'last': 'Hopper'},
-        ]
-
-extract_full_names(names)
+    return [f"{n['first']} {n['last']}" for n in people]
