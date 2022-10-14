@@ -24,3 +24,8 @@ def truncate(phrase, n):
         >>> truncate("Woah", 3)
         '...'
     """
+    # following code adapted from https://stackoverflow.com/questions/2872512/python-truncate-a-long-string User: Marcelo Cantos Date: 10/14/22
+    if n >= 3:
+        return phrase[:n-3] + '...' if len(phrase) >= n else phrase
+    else:
+        return 'Truncation must be at least 3 characters'
